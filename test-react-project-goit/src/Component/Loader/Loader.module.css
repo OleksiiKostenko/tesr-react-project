@@ -1,0 +1,6 @@
+.loader_wrapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+}
