@@ -1,9 +1,9 @@
-import { Suspense } from 'react';
-import { Toaster } from 'react-hot-toast';
-import { NavLink, Outlet } from 'react-router-dom';
-import css from '../Layout/Layout.module.css';
-import Loader from '../Loader/Loader';
-import { styled } from 'goober';
+import { Suspense } from "react";
+import { Toaster } from "react-hot-toast";
+import { NavLink, Outlet } from "react-router-dom";
+import css from "./Layout.module.css";
+import Loader from "../Loader/Loader";
+import { styled } from "goober";
 
 const StyledLink = styled(NavLink)`
   &.active {

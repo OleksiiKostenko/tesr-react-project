@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import UserCard from "../Component/UserCard/UserCard";
-import css from "../Page/Page.module.css";
+import css from "./Page.module.css";
 
 import { useEffect, useState } from "react";
 import Loader from "../Component/Loader/Loader";

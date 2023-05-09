@@ -1,6 +1,6 @@
-import { Rings } from 'react-loader-spinner';
+import { Rings } from "react-loader-spinner";
 
-import css from '../Loader/Loader.module.css';
+import css from "./Loader.module.css";
 
 function Loader() {
   return (
