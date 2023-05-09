@@ -7,7 +7,7 @@ import { styled } from "goober";
 
 const StyledLink = styled(NavLink)`
   &.active {
-    color: #5cd3a8;
+    color: yellow;
   }
 `;
 

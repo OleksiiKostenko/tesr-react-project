@@ -23,6 +23,10 @@ clip-path: circle(50%);
     text-transform: uppercase;
     color: #373737;
     padding: 0;
+    transition:  transform 500ms ease;
+}
+.btn:hover{
+    transform: scale(1.05);
 }
 .text{
     margin: 0;

@@ -1,22 +1,22 @@
 import { useEffect } from "react";
-import { useState } from "react";
-import { getArrayLangth, getUsers } from "../../service/getQuery";
+import { getAllUsers, getUsersFollow } from "../../service/getQuery";
 import User from "../User/User";
 import css from "./UserCard.module.css";
+import { useInputContex } from "../Hooks/Contex";
 
 function UserCard() {
-  const [users, setUsers] = useState([]);
-  const [page, setPage] = useState(1);
-  const [arrayLangth, setArrayLangth] = useState([]);
+  const { users, setUsers, query, page, setPage, arrayLangth } =
+    useInputContex();
 
   useEffect(() => {
-    getArrayLangth().then((data) => setArrayLangth(data));
-  }, []);
-
-  useEffect(() => {
-    getUsers(page).then((data) => setUsers((prev) => [...prev, ...data]));
-  }, [page]);
-
+    if (query === "all") {
+      getAllUsers(page).then((data) => setUsers((prev) => [...prev, ...data]));
+    }
+    getUsersFollow(page, query).then((data) =>
+      setUsers((prev) => [...prev, ...data])
+    );
+  }, [page, query]);
+  console.log("arrayLangth", arrayLangth);
   const handelClick = () => {
     setPage((prevPage) => prevPage + 1);
     setTimeout(() => {
@@ -25,6 +25,8 @@ function UserCard() {
         behavior: "smooth",
       });
     }, 300);
+    console.log("first", users.length);
+    console.log("first", arrayLangth.length);
   };
   return (
     <>

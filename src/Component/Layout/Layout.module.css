@@ -20,10 +20,12 @@
     background-color: #EBD8FF;
     padding: 0;
     margin-bottom: 30px;
+    transition: transform 500ms ease 100ms;
 }
 
 .nav_link:hover {
     background-color: #5CD3A8;
+    transform: scale(1.05);
 }
 
 .nav {

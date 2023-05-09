@@ -4,6 +4,7 @@ import css from "./Page.module.css";
 
 import { useEffect, useState } from "react";
 import Loader from "../Component/Loader/Loader";
+import Filter from "../Component/Filter/Filter";
 
 function Tweets() {
   const [firstRender, setFirstRender] = useState(false);
@@ -19,10 +20,13 @@ function Tweets() {
     <Loader></Loader>
   ) : (
     <section className={css.section}>
-      <UserCard></UserCard>
-      <Link className={css.btn} to="/">
-        Home
-      </Link>
+      <Filter />
+      <div className={css.container}>
+        <UserCard />
+        <Link className={css.btn} to="/">
+          Home
+        </Link>
+      </div>
     </section>
   );
 }
